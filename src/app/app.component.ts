@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 
@@ -8,28 +8,28 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 // https://www.ngdevelop.tech/angular-8-export-to-pdf-using-pdfmake/
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-})
+             selector: 'app-root',
+             templateUrl: './app.component.html',
+             styleUrls: ['./app.component.scss'],
+           })
 export class AppComponent {
-    private readonly documentDefinition = {
-        content: 'This is an sample PDF printed with pdfMake',
-    };
+  private readonly documentDefinition = {
+    content: 'This is an sample PDF printed with pdfMake',
+  };
 
-    downloadPdf() {
-        pdfMake.createPdf(this.documentDefinition).download();
-    }
+  downloadPdf() {
+    pdfMake.createPdf(this.documentDefinition).download();
+  }
 
-    openPdfInNewWindow() {
-        pdfMake.createPdf(this.documentDefinition).open();
-    }
+  openPdfInNewWindow() {
+    pdfMake.createPdf(this.documentDefinition).open();
+  }
 
-    openPdfInSameWindow() {
-        pdfMake.createPdf(this.documentDefinition).open({}, window);
-    }
+  openPdfInSameWindow() {
+    pdfMake.createPdf(this.documentDefinition).open({}, window);
+  }
 
-    printPdf() {
-        pdfMake.createPdf(this.documentDefinition).print();
-    }
+  printPdf() {
+    pdfMake.createPdf(this.documentDefinition).print();
+  }
 }

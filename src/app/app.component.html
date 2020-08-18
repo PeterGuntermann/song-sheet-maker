@@ -1,5 +1,16 @@
 <h1>SongSheetMaker</h1>
-<button (click)="downloadPdf()">Download PDF</button>
-<button (click)="openPdfInNewWindow()">Open PDF in a new window</button>
-<button (click)="openPdfInSameWindow()">Open PDF in the same window</button>
-<button (click)="printPdf()">Print PDF</button>
+
+<section class="action-bar">
+  <h2>Actions</h2>
+  <button (click)="downloadPdf()">Download PDF</button>
+  <button (click)="openPdfInNewWindow()">Open PDF in a new window</button>
+  <button (click)="openPdfInSameWindow()">Open PDF in the same window</button>
+  <button (click)="printPdf()">Print PDF</button>
+</section>
+
+<section>
+  <h2>Lyrics</h2>
+  <textarea placeholder="Put lyrics here..."></textarea>
+</section>
+
+
