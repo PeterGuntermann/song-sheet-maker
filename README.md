@@ -3,7 +3,9 @@
 ## Concept
 
 + `PdfCreatorService` creates the PDF using PDFMake.
-+ `SongSheetService` holds the musical information about the sheet. 
++ `SongSheetService` holds the musical information about the sheet.
+
+--- 
 
 ## TODOs
 ### next / get it to work
